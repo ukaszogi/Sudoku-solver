@@ -27,7 +27,7 @@ def test(y,x,n):
                 return False
     return True
 
-def solve():
+def doo():
     global grid
     for i in range(9):
         for j in range(9):
@@ -35,9 +35,9 @@ def solve():
                 for n in range(1,10):
                     if test(i,j,n):
                         grid[i][j]=n
-                        solve()
+                        doo()
                         grid[i][j]=0
                 return
     pisz(grid)
     input("Next")
-solve()
+doo()
