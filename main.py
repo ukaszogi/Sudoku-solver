@@ -36,8 +36,8 @@ def do():
                     if test(i,j,n):
                         sudoku[i][j]=n
                         do()  #it's basically some backpropagation - program just accepts the first value and checks, if you can solve now = if the value is correct
-                        sudoku[i][j]=0
-                return
+                        sudoku[i][j]=0  #and if function returns, it's not correct = first value was a bad choice
+                return  #if there's a 0 and there can't be any number here, something went wrong
     pisz(sudoku)
     input("Next")
 do()
