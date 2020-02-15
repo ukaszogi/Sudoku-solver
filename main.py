@@ -14,7 +14,7 @@ def pisz(a):  #it's basically some better way to print-out 2d-list
     for i in a:
         print(i)
 
-def test(y,x,n):  #this func tests if given n can be placed in x-th row and y-th collumn
+def test(y,x,n):  #this func tests if given n can be placed in (x,y)
     global sudoku
     for i in range(9):
         if (sudoku[y][i]==n) | (sudoku[i][x]==n):  #checks for any n istances in row and in column
