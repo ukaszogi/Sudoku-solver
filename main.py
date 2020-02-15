@@ -14,16 +14,16 @@ def pisz(a):  #it's basically some better way to print-out 2d-list
     for i in a:
         print(i)
 
-def test(y,x,n):  #this func tests if given n can be placed in (x,y)
+def test(x,y,n):  #this func tests if given n can be placed in (x,y)
     global sudoku
     for i in range(9):
-        if (sudoku[y][i]==n) | (sudoku[i][x]==n):  #checks for any n istances in row and in column
+        if (sudoku[x][i]==n) | (sudoku[i][y]==n):  #checks for any n istances in row and in column
             return False
-    y0 = (y//3)*3  #this checks in wich 3x3 sqare (x,y) is
-    x0 = (x//3)*3
+    x0 = (x//3)*3  #this checks in wich 3x3 sqare (x,y) is
+    y0 = (y//3)*3
     for i in range(3):
         for j in range(3):
-            if sudoku[y0+i][x0+j]==n:  #checks for any n istances in 3x3
+            if sudoku[x0+i][y0+j]==n:  #checks for any n istances in 3x3
                 return False
     return True
 
