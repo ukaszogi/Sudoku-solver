@@ -39,5 +39,5 @@ def do():
                         sudoku[i][j]=0  #and if function returns, it's not correct = first value was a bad choice
                 return  #if there's a 0 and there can't be any number here, something went wrong
     pisz(sudoku)
-    input("Next") #w/out input window would just close after computing giving you no time to actualy see your answer, so its here. new solucion will only show after enter confirmation
+    input("Next") #w/out input(), window would just close after computing giving you no time to actualy see your answer, so its here. new solucion will only show after enter confirmation
 do()
